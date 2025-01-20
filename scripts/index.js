@@ -1,38 +1,68 @@
-
-const words = ["Digital Future", "Tech Evolution", "Modern Era"];
+const words = [ "Tech Evolution", "Modern Era", "Digital Future"];
 let currentIndex = 0;
 
 const dynamicWordElement = document.getElementById("dynamic-word");
 
 function changeWord() {
-    // Fade out the current word
+    // Start fade out
     dynamicWordElement.style.opacity = "0";
-
-
-    // After fade-out, change the word and fade it back in
+    
     setTimeout(() => {
-        dynamicWordElement.innerHTML = words[currentIndex];
-
+        // Change text and fade in
+        dynamicWordElement.textContent = words[currentIndex];
         dynamicWordElement.style.opacity = "1";
-
-        // Move to the next word in the array
         currentIndex = (currentIndex + 1) % words.length;
-    }, 1000); // Fade-out duration
+    }, 800); // Wait 1s for fade out
 }
 
-// Change the word every 3 seconds
+// Change words every 4 seconds (3s display + 1s fade transition)
 setInterval(changeWord, 3000);
 
 
 
-let loader = document.getElementById("loader");
 
-setTimeout(() => {
-    loader.classList.add("dis");
-    setTimeout(() => {
-        loader.style.display = 'none';
-    }, 500); // Match this delay to the animation duration in CSS
-}, 6000);
+window.onload = function() {
+  const loader = document.getElementById("loader");
+  const audio = document.getElementById("loaderAudio");
+  
+  // Create a temporary button to start the loader
+  const startButton = document.createElement('button');
+  startButton.innerHTML = 'Start';
+  startButton.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      padding: 10px 20px;
+      background: #584AD2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  `;
+
+  document.body.appendChild(startButton);
+
+  startButton.onclick = function() {
+      // Remove the button
+      startButton.remove();
+      
+      // Play audio
+      audio.play();
+
+      // Start your loader timeout
+      setTimeout(() => {
+          loader.classList.add("dis");
+          audio.pause(); // Stop the audio
+          
+          setTimeout(() => {
+              loader.style.display = 'none';
+          }, 500);
+      }, 6000);
+  };
+}
+
 
 
 
@@ -55,4 +85,62 @@ function opener() {
     icon.classList.toggle("bxs-x-square")
 
 }
+
+
+
+const audioPlayer = document.getElementById('audioPlayer');
+const playButton = document.getElementById('playButton');
+const micIcon = playButton.querySelector('i');
+
+// Create audio context and nodes
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const source = audioContext.createMediaElementSource(audioPlayer);
+const pitchShift = audioContext.createBiquadFilter();
+
+// Set up the filter for deeper sound
+pitchShift.type = "lowshelf";
+pitchShift.frequency.value = 100;
+pitchShift.gain.value = 25; // Increase this value for deeper sound
+
+// Connect the nodes
+source.connect(pitchShift);
+pitchShift.connect(audioContext.destination);
+
+// Set initial playback speed
+audioPlayer.playbackRate = 1.1;
+
+function togglePlay() {
+   // Resume audio context if suspended (browser policy)
+   if (audioContext.state === 'suspended') {
+       audioContext.resume();
+   }
+
+   if (audioPlayer.paused) {
+       audioPlayer.play();
+       playButton.classList.add('pulse-active');
+       micIcon.classList.remove('bx-microphone');
+       micIcon.classList.add('bx-microphone-off');
+   } else {
+       audioPlayer.pause();
+       playButton.classList.remove('pulse-active');
+       micIcon.classList.remove('bx-microphone-off');
+       micIcon.classList.add('bx-microphone');
+   }
+}
+
+// Function to adjust deepness
+function adjustBass(bassValue) {
+   pitchShift.gain.value = bassValue; // Try values between 0-25
+}
+
+// Function to change playback speed
+function changeSpeed(speed) {
+   audioPlayer.playbackRate = speed;
+   // Examples:
+   // changeSpeed(0.5) // Half speed
+   // changeSpeed(1.0) // Normal speed
+   // changeSpeed(2.0) // Double speed
+}
+
+playButton.addEventListener('click', togglePlay);
 
