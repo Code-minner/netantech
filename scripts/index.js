@@ -21,47 +21,14 @@ setInterval(changeWord, 3000);
 
 
 
-window.onload = function() {
-  const loader = document.getElementById("loader");
-  const audio = document.getElementById("loaderAudio");
-  
-  // Create a temporary button to start the loader
-  const startButton = document.createElement('button');
-  startButton.innerHTML = 'Start';
-  startButton.style.cssText = `
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1000;
-      padding: 10px 20px;
-      background: #584AD2;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-  `;
+let loader = document.getElementById("loader");
 
-  document.body.appendChild(startButton);
-
-  startButton.onclick = function() {
-      // Remove the button
-      startButton.remove();
-      
-      // Play audio
-      audio.play();
-
-      // Start your loader timeout
-      setTimeout(() => {
-          loader.classList.add("dis");
-          audio.pause(); // Stop the audio
-          
-          setTimeout(() => {
-              loader.style.display = 'none';
-          }, 500);
-      }, 6000);
-  };
-}
+setTimeout(() => {
+    loader.classList.add("dis");
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 500); // Match this delay to the animation duration in CSS
+}, 6000);
 
 
 
