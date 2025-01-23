@@ -165,7 +165,7 @@ a {}
     left: 0;
     height: 100vh;
     background-color: var(--tertiary_color);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
@@ -1104,11 +1104,19 @@ header .nav_bar ul li a span {
 }
 
 
+
 .section_seven {
     justify-content: center;
     align-items: center;
     margin: auto;
     background-color: var(--tertiary_color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/Group\ 1637.png);
+    overflow: hidden;
+    background-position: bottom;
+    border-radius: 30px;
+    padding: 4rem 5%;
 }
 
 .section_seven_sub {
@@ -1117,17 +1125,12 @@ header .nav_bar ul li a span {
     margin: 0px auto;
     width: 100%;
     height: 100%;
-    background-color: var(--span);
-    padding: 4rem 12%;
-    border-radius: 30px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../img/Group\ 1637.png);
-    background-position: bottom
+    overflow: hidden;
 }
 
 .section_seven_sub .head_setion {
     text-align: center;
+    padding: 0 8%;
 }
 
 .section_seven_sub .head_section h2 {
@@ -1152,30 +1155,12 @@ header .nav_bar ul li a span {
 
 .section_seven_sub_container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    height: auto;
     padding-top: 2rem;
 }
 
-.section_seven_sub_container_sub1 {
-    display: grid;
-    grid-template-columns: 55% 45%;
-    grid-gap: 20px;
-    justify-content: center;
-    align-items: start;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.section_seven_sub_container_sub2 {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    grid-gap: 20px;
-    justify-content: center;
-    align-items: start;
-    width: 100%;
-    margin: 0 auto;
+.swiper-slide {
+    height: auto !important;
 }
 
 .section_seven_sub_container_content {
@@ -1530,18 +1515,18 @@ footer {
     .nav_bar ul {
         display: none;
         text-align: center;
-        margin: 9rem 0 0;
+        margin: 8rem 0 0;
         opacity: 0;
         transition: 0s;
     }
 
     .nav_bar nav ul li {
-        margin: 40px 0;
+        margin: 10px 0;
     }
 
     .nav_bar nav ul li a {
         color: var(--primary_color);
-        margin: 30px;
+        margin: 20px 0 0;
     }
 
     .bar {
