@@ -16,7 +16,7 @@ function changeWord() {
 }
 
 // Change words every 4 seconds (3s display + 1s fade transition)
-setInterval(changeWord, 3000);
+setInterval(changeWord, 2500);
 
 
 
@@ -34,24 +34,37 @@ setTimeout(() => {
 
 
 function toggleNavBar() {
-    var bar = document.querySelector('.bar');
-    var navBar = document.getElementById("navbar")
-
-
-    bar.classList.toggle('roller');
+    const bar = document.querySelector('.bar');
+    const navBar = document.getElementById("navbar");
+    
     bar.classList.toggle('active');
-    navBar.classList.toggle("navigation")
+    navBar.classList.toggle("navigation");
+    
+    // Reset animations by removing and re-adding navigation class
+    if (navBar.classList.contains("navigation")) {
+        const items = navBar.querySelectorAll('li');
+        items.forEach(item => {
+            item.style.animation = 'none';
+            item.offsetHeight; // Trigger reflow
+            item.style.animation = null;
+        });
+    }
 }
+document.addEventListener("DOMContentLoaded", ShadowScroller);
+function ShadowScroller() {
+    // Navbar shadowHeader Scroller Section //
+    const shadowHeader = document.querySelector("header");
+  
+    window.addEventListener("scroll", () => {
+      const isScrolled = window.scrollY > 200;
+
+      
+      shadowHeader.classList.toggle("shadow", isScrolled);
+    });
+  }
 
 
-function opener() {
-    var menu = document.getElementById("menu")
-    var icon = document.querySelector(".bx-menu")
 
-    menu.classList.toggle("menu")
-    icon.classList.toggle("bxs-x-square")
-
-}
 
 
 
@@ -108,6 +121,12 @@ function changeSpeed(speed) {
    // changeSpeed(1.0) // Normal speed
    // changeSpeed(2.0) // Double speed
 }
+
+audioPlayer.addEventListener('ended', () => {
+    playButton.classList.remove('pulse-active');
+    micIcon.classList.remove('bx-microphone-off');
+    micIcon.classList.add('bx-microphone');
+});
 
 playButton.addEventListener('click', togglePlay);
 
