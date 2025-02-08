@@ -63,7 +63,26 @@ function ShadowScroller() {
     });
   }
 
+  function toggleDropdown() {
+    const dropdown = document.getElementById('servicesDropdown');
+    const chevron = document.querySelector('.chevron');
+    dropdown.classList.toggle('show');
+    chevron.classList.toggle('open');
+}
 
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-button') && !event.target.matches('.chevron')) {
+        const dropdowns = document.getElementsByClassName('dropdown_content');
+        const chevrons = document.getElementsByClassName('chevron');
+        for (let i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+                chevrons[i].classList.remove('open');
+            }
+        }
+    }
+}
 
 
 
