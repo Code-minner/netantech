@@ -179,6 +179,24 @@ a {}
     font-weight: 900;
 }
 
+.dotsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.dots-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .dis {
     animation-name: loaderFadeOut;
     animation-duration: 0.2s;
@@ -909,15 +927,22 @@ header .nav_bar ul li a span {
     align-items: center;
     margin: 20px auto;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 24rem;
     background-color: var(--span);
     border-radius: 30px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/Group\ 1630.png);
+    background-image: url(../img/Group\ 1637.png);
     background-position: bottom;
     position: relative;
     overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .section_three_sub_container {
@@ -961,11 +986,27 @@ header .nav_bar ul li a span {
 }
 
 
+@keyframes scaleEffect {
+    0% {
+        transform: scale(1);
+    }
+
+50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .section_three_sub_img_1 {
     position: absolute;
     width: 10%;
     bottom: -15px;
     left: 5%;
+    animation-delay: 3s;
+    animation: scaleEffect 7s ease-in-out both infinite;
 }
 
 .section_three_sub_img_2 {
@@ -973,6 +1014,8 @@ header .nav_bar ul li a span {
     bottom: -5px;
     width: 7%;
     left: 45%;
+    animation-delay: 9s;
+    animation: scaleEffect 3s ease-in-out both infinite;
 }
 
 .section_three_sub_img_3 {
@@ -980,8 +1023,8 @@ header .nav_bar ul li a span {
     bottom: -5px;
     right: 5%;
     width: 22%;
+    animation: scaleEffect 5s ease-in-out both infinite;
 }
-
 
 
 .section_four {
