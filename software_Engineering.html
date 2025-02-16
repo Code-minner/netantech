@@ -292,7 +292,7 @@
 
             <div class="section_three_sub">
 
-                <canvas class="dotsCanvas"></canvas>
+                <div id="particles-4"></div>
 
                 <div class="section_three_sub_container">
 
@@ -480,5 +480,19 @@
 <script src="scripts/index.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="scripts/particles.min.js"></script>
+<script>
+    // Using the same configuration for consistency
+    const particleConfig = {
+        particles: {
+            number: { value: 100 },
+            color: { value: "#ffffff" },
+            size: { value: 2 }
+        }
+    };
+
+    // Initialize all three instances
+    particlesJS("particles-4", particleConfig);
+</script>
 
 </html>

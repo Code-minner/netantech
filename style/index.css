@@ -165,7 +165,7 @@ a {}
     left: 0;
     height: 100vh;
     background: url(../img/Group\ 1637.png);
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
@@ -177,6 +177,25 @@ a {}
     height: 100%;
     position: absolute;
     font-weight: 900;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  
+
+.dots-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .dis {
@@ -2011,7 +2030,7 @@ footer {
     }
 
     .phoneSize svg text {
-        font-size: 3.8em;
+        font-size: 3.5em;
         stroke-width: 4;
         letter-spacing: 2px;
         width: 100%;
@@ -2254,7 +2273,7 @@ footer {
     }
 
     .head_setion_two .head_setion_two_box p {
-        font-size: .7em;
+        font-size: .5em;
     }
 
     .head_setion_two h2 {

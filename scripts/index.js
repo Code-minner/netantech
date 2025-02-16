@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Navbar Toggle
-    window.toggleNavBar = function() {
+    window.toggleNavBar = function () {
         const bar = document.querySelector('.bar');
         const navBar = document.getElementById("navbar");
         if (bar && navBar) {
             bar.classList.toggle('active');
             navBar.classList.toggle("navigation");
-            
+
             if (navBar.classList.contains("navigation")) {
                 const items = navBar.querySelectorAll('li');
                 items.forEach(item => {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Dropdown
-    window.toggleDropdown = function() {
+    window.toggleDropdown = function () {
         const dropdown = document.getElementById('servicesDropdown');
         const chevron = document.querySelector('.chevron');
         if (dropdown && chevron) {
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Dropdown outside click
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (!event.target.matches('.dropdown-button') && !event.target.matches('.chevron')) {
             const dropdowns = document.getElementsByClassName('dropdown_content');
             const chevrons = document.getElementsByClassName('chevron');
@@ -85,22 +85,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Audio Player
-    const audioPlayer = document.getElementById('audioPlayer');
-    const playButton = document.getElementById('playButton');
-    
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playButton = document.getElementById('playButton');
+
     if (audioPlayer && playButton) {
         const micIcon = playButton.querySelector('i');
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
         const source = audioContext.createMediaElementSource(audioPlayer);
         const pitchShift = audioContext.createBiquadFilter();
 
-        pitchShift.type = "lowshelf";
-        pitchShift.frequency.value = 100;
-        pitchShift.gain.value = 25;
+                pitchShift.type = "lowshelf";
+                pitchShift.frequency.value = 100;
+                pitchShift.gain.value = 25;
 
-        source.connect(pitchShift);
-        pitchShift.connect(audioContext.destination);
-        audioPlayer.playbackRate = 1.1;
+                source.connect(pitchShift);
+                pitchShift.connect(audioContext.destination);
+                audioPlayer.playbackRate = 1.1;
 
         window.togglePlay = function() {
             if (audioContext.state === 'suspended') {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const swiperContainer = document.querySelector('.swiper_content_tes');
-    
+
     swiperContainer.addEventListener('mouseenter', () => {
         swiper_tes.autoplay.stop();
     });
@@ -173,23 +173,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+/*
 class DotsBackground {
     constructor(canvasSelector) {
         this.canvas = document.querySelector(canvasSelector);
-        
+
         // Check if canvas exists before initializing
         if (!this.canvas) {
             console.warn(`Canvas ${canvasSelector} not found`);
             return;
         }
-        
+
         this.ctx = this.canvas.getContext('2d');
         this.dots = [];
-        
+
         // Bind methods
         this.resizeCanvas = this.resizeCanvas.bind(this);
         this.animate = this.animate.bind(this);
-        
+
         // Initialize
         this.resizeCanvas();
         window.addEventListener('resize', this.resizeCanvas);
@@ -208,7 +210,7 @@ class DotsBackground {
 
     animate() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
+
         // Update and draw dots
         this.dots.forEach(dot => {
             dot.update();
@@ -299,12 +301,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Dots animation initialization failed:', error);
     }
 });
-
+*/
 
 
 document.addEventListener('DOMContentLoaded', () => {
     const timelineItems = document.querySelectorAll('.timeline_item');
-    
+
     if (timelineItems.length > 0) {
         const options = {
             root: null,
@@ -330,14 +332,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollIndicator = document.querySelector('.timeline_scroll_indicator');
     const timelineContainer = document.querySelector('.timeline_items');
     const timelineItems = document.querySelectorAll('.timeline_item');
-    
+
     if (scrollIndicator && timelineContainer && timelineItems.length > 0) {
         window.addEventListener('scroll', () => {
             try {
                 const containerRect = timelineContainer.getBoundingClientRect();
                 const visibleItem = [...timelineItems].find(item => {
                     const rect = item.getBoundingClientRect();
-                    return rect.top <= window.innerHeight/2 && rect.bottom >= window.innerHeight/2;
+                    return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
                 });
 
                 if (visibleItem) {
