@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     loader.style.display = 'none';
                 }, 500);
             });
-        }, 6000);
+        }, 4000);
     }
 
     // Navbar Toggle
