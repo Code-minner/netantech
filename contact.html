@@ -225,208 +225,215 @@
 
                     </div>
 
-                    <form id="contactForm" method="POST" data-netlify="true" action="/contact">
-                        <input type="hidden" name="form-name" value="contact">
-                        <div class="form_sub">
-                            <div>
-                                <label>Full Name</label>
-                                <input type="text" id="fullName" name="fullName" placeholder="i.e. John Doe" required>
+                    <div>
+
+                        <form id="contactForm" name="contact" method="POST" data-netlify="true"
+                            netlify-honeypot="bot-field">
+                            <!-- Add these hidden fields -->
+                            <input type="hidden" name="form-name" value="contact">
+                            <input type="hidden" name="bot-field">
+                            <div class="form_sub">
+                                <div>
+                                    <label>Full Name</label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="i.e. John Doe"
+                                        required>
+                                </div>
+                                <div>
+                                    <label>Email</label>
+                                    <input type="email" id="email" name="email" placeholder="i.e. john@mail.com"
+                                        required>
+                                </div>
                             </div>
-                            <div>
-                                <label>Email</label>
-                                <input type="email" id="email" name="email" placeholder="i.e. john@mail.com" required>
+
+                            <div class="form_sub two_Pro">
+                                <div>
+                                    <label>Phone Number</label>
+                                    <input type="text" id="phone" name="phone" placeholder="i.e.+234-802-555-0178">
+                                </div>
+                                <div>
+                                    <label>Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder="i.e. I need a help">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form_sub two_Pro">
-                            <div>
-                                <label>Phone Number</label>
-                                <input type="text" id="phone" name="phone" placeholder="i.e.+234-802-555-0178">
+                            <label>Message</label>
+                            <textarea id="message" name="message" placeholder="Type Your Message" rows="5"
+                                required></textarea>
+
+                            <div class="link_form">
+                                <button type="submit" class="submit-btn">Explore Our Services</button>
                             </div>
-                            <div>
-                                <label>Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="i.e. I need a help">
-                            </div>
-                        </div>
 
-                        <label>Message</label>
-                        <textarea id="message" name="message" placeholder="Type Your Message" rows="5"
-                            required></textarea>
+                            <!-- Add this to show form submission status -->
+                            <div id="formStatus" style="margin-top: 15px;"></div>
+                        </form>
 
-                        <div class="link_form">
-                            <button type="submit" class="submit-btn">Explore Our Services</button>
-                        </div>
 
-                        <!-- Add this to show form submission status -->
-                        <div id="formStatus" style="margin-top: 15px;"></div>
-                    </form>
-
+                    </div>
 
                 </div>
 
             </div>
+
+
+            <div class="section_four">
+
+                <div class="section_four_sub">
+
+                    <div class="section_four_sub_container">
+
+                        <div class="section_four_sub_container_text">
+
+                            <h1>
+                                Join Us in Building the Future
+                            </h1>
+
+                            <p>Whether you're looking to develop next-gen software, fortify your cybersecurity, or scale
+                                with cloud technology, we are here to help you succeed.</p>
+
+                            <div class="section_four_sub_container_text_link">
+
+                                <img src="img/Avatar Groups.png" alt="">
+
+                                <p>Let's Talk About Your Next Project</p>
+                            </div>
+
+                            <div class="section_four_sub_container_img">
+                                <img src="img/Frame (4).png" alt="">
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="group_container">
+                            <img src="img/Group 1635.png" class="grouper" alt="">
+                            <img src="img/Group 1636.png" class="grouper_two" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <footer>
+
+                <div class="footer_sub">
+
+                    <div class="footer_sub_news_section">
+
+                        <div class="footer_sub_news_section_text">
+                            <h2>Join our newsletter</h2>
+                            <p>Get all the latest Netantech news delivered to your inbox.</p>
+                        </div>
+
+                        <div class="footer_sub_news_section_input">
+                            <input type="text" placeholder="Email adress">
+
+                            <button>Subscribe</button>
+                        </div>
+
+                    </div>
+
+                    <div class="footer_sub_links">
+
+                        <div class="footer_sub_links_sub">
+                            <h2>NETAN TECHNOLOGIES</h2>
+
+                            <ul>
+                                <li>
+                                    <a href="#">Website</a>
+                                </li>
+                                <li>
+                                    <a href="#">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="#">Twiter</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dribble</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="footer_sub_links_img">
+                            <img src="img/Netan_logo-removebg-preview.png" alt="">
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="contact_section">
+                        <h2>Contact Us</h2>
+
+                        <div class="contact_section_info">
+
+                            <div class="contact_section_info_sub">
+                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.12669 4.2709C2.12225 4.18893 2.10172 4.10864 2.06626 4.03461C2.0308 3.96058 1.9811 3.89425 1.92001 3.83943C1.85891 3.7846 1.78762 3.74235 1.7102 3.71508C1.63277 3.6878 1.55074 3.67605 1.46877 3.68048C1.3868 3.68491 1.30651 3.70545 1.23248 3.74091C1.15845 3.77637 1.09213 3.82607 1.0373 3.88716C0.982477 3.94825 0.940222 4.01955 0.91295 4.09697C0.885677 4.17439 0.873921 4.25643 0.878353 4.3384L2.12669 4.2709ZM2.93169 1.07673C2.82224 1.19768 2.76442 1.35662 2.77056 1.51963C2.77671 1.68263 2.84633 1.83677 2.96457 1.94913C3.08281 2.0615 3.2403 2.12319 3.4034 2.12103C3.5665 2.11887 3.7223 2.05302 3.83752 1.93756L2.93169 1.07673ZM7.88669 15.0101C7.95618 15.0549 8.03388 15.0854 8.11527 15.1C8.19666 15.1145 8.28012 15.1128 8.36083 15.0948C8.44154 15.0769 8.51789 15.0431 8.58546 14.9955C8.65303 14.9478 8.71047 14.8872 8.75446 14.8172C8.79845 14.7472 8.82811 14.6692 8.84172 14.5876C8.85534 14.5061 8.85264 14.4226 8.83378 14.3421C8.81492 14.2616 8.78028 14.1857 8.73185 14.1187C8.68343 14.0517 8.62219 13.9949 8.55169 13.9517L7.88669 15.0101ZM11.5942 15.2151C11.4319 15.1811 11.2627 15.2131 11.1239 15.3039C10.9851 15.3947 10.8881 15.5369 10.8542 15.6992C10.8203 15.8616 10.8522 16.0307 10.943 16.1695C11.0338 16.3083 11.176 16.4053 11.3384 16.4392L11.5942 15.2151ZM12.0375 11.4534L12.4167 11.0534L11.51 10.1926L11.1309 10.5926L12.0375 11.4534ZM13.6659 10.8851L15.2575 11.8017L15.8817 10.7184L14.2892 9.80173L13.6659 10.8851ZM15.565 13.7017L14.3809 14.9476L15.2875 15.8092L16.4709 14.5626L15.565 13.7017ZM5.96585 11.7992C2.73585 8.3984 2.19419 5.52923 2.12669 4.2709L0.878353 4.3384C0.961687 5.88006 1.61502 9.0334 5.06002 12.6601L5.96585 11.7992ZM7.11252 6.2684L7.35085 6.01673L6.44502 5.1559L6.20585 5.40756L7.11252 6.2684ZM7.53919 2.8834L6.48835 1.39756L5.46752 2.11923L6.51752 3.60506L7.53919 2.8834ZM6.65835 5.83756C6.50837 5.69303 6.35698 5.54996 6.20419 5.4084L6.20252 5.41006L6.20002 5.41256C6.18523 5.42787 6.17132 5.44401 6.15835 5.4609C6.07667 5.56902 6.01203 5.68903 5.96669 5.81673C5.88502 6.0459 5.84169 6.34923 5.89669 6.72756C6.00502 7.4709 6.49252 8.47006 7.76502 9.8109L8.67169 8.94923C7.48169 7.69673 7.18835 6.9259 7.13335 6.5459C7.10669 6.36256 7.13335 6.26673 7.14419 6.2359L7.15085 6.22006C7.14404 6.23103 7.13623 6.24136 7.12752 6.2509C7.12264 6.25656 7.11763 6.26295 7.11252 6.2684L6.65835 5.83756ZM7.76502 9.81006C9.03419 11.1467 9.99252 11.6717 10.7234 11.7909C11.0992 11.8517 11.4034 11.8026 11.6334 11.7117C11.7611 11.6618 11.8798 11.5914 11.985 11.5034L12.0142 11.4751L12.0259 11.4634C12.0278 11.4618 12.0298 11.4601 12.0317 11.4584L12.0342 11.4559L12.035 11.4542C12.035 11.4542 12.0367 11.4534 11.5834 11.0226C11.13 10.5926 11.1309 10.5917 11.1309 10.5909L11.1325 10.5901L11.1342 10.5876L11.1392 10.5834C11.1518 10.5712 11.1649 10.5596 11.1784 10.5484C11.1859 10.5434 11.185 10.5451 11.1742 10.5492C11.1575 10.5559 11.0825 10.5826 10.9242 10.5567C10.5892 10.5017 9.86585 10.2067 8.67169 8.94923L7.76502 9.81006ZM6.48835 1.39756C5.64335 0.202564 3.95335 6.3628e-05 2.93169 1.07673L3.83752 1.93756C4.27335 1.47923 5.04085 1.51506 5.46752 2.11923L6.48835 1.39756ZM14.3809 14.9476C14.1484 15.1926 13.9059 15.3242 13.6692 15.3476L13.7917 16.5909C14.4142 16.5301 14.9184 16.1984 15.2875 15.8092L14.3809 14.9476ZM7.35085 6.01673C8.15752 5.16756 8.21419 3.83923 7.53919 2.8834L6.51835 3.60506C6.87002 4.10256 6.81585 4.7659 6.44502 5.1559L7.35085 6.01673ZM15.2575 11.8017C15.9417 12.1959 16.0759 13.1642 15.565 13.7017L16.4709 14.5626C17.5584 13.4176 17.2417 11.5017 15.8817 10.7184L15.2575 11.8017ZM12.4167 11.0534C12.7375 10.7151 13.2384 10.6392 13.6659 10.8851L14.2892 9.80173C13.3734 9.27506 12.2392 9.4259 11.51 10.1926L12.4167 11.0534ZM8.55169 13.9517C7.73252 13.4367 6.86002 12.7401 5.96585 11.7992L5.06002 12.6601C6.02169 13.6726 6.97419 14.4367 7.88669 15.0101L8.55169 13.9517ZM13.6684 15.3476C12.9742 15.4085 12.2749 15.3638 11.5942 15.2151L11.3384 16.4392C12.1437 16.6137 12.9709 16.6648 13.7917 16.5909L13.6684 15.3476Z"
+                                        fill="#2D266C" />
+                                </svg>
+
+                                <span>08147583789</span>
+                            </div>
+
+                            <div class="contact_section_info_sub">
+
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.5 0.5C14.163 0.5 14.7989 0.763392 15.2678 1.23223C15.7366 1.70107 16 2.33696 16 3V11C16 11.663 15.7366 12.2989 15.2678 12.7678C14.7989 13.2366 14.163 13.5 13.5 13.5H2.5C1.83696 13.5 1.20107 13.2366 0.732233 12.7678C0.263392 12.2989 0 11.663 0 11V3C0 2.33696 0.263392 1.70107 0.732233 1.23223C1.20107 0.763392 1.83696 0.5 2.5 0.5H13.5ZM15 4.461L8.254 8.431C8.19022 8.46845 8.11893 8.49128 8.04527 8.49785C7.9716 8.50442 7.8974 8.49457 7.828 8.469L7.746 8.431L1 4.463V11C1 11.3978 1.15804 11.7794 1.43934 12.0607C1.72064 12.342 2.10218 12.5 2.5 12.5H13.5C13.8978 12.5 14.2794 12.342 14.5607 12.0607C14.842 11.7794 15 11.3978 15 11V4.461ZM13.5 1.5H2.5C2.10218 1.5 1.72064 1.65804 1.43934 1.93934C1.15804 2.22064 1 2.60218 1 3V3.302L8 7.42L15 3.3V3C15 2.60218 14.842 2.22064 14.5607 1.93934C14.2794 1.65804 13.8978 1.5 13.5 1.5Z"
+                                        fill="#2D266C" />
+                                </svg>
+
+
+                                <span>info@netantech.com.</span>
+                            </div>
+
+                            <div class="contact_section_info_sub">
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_315_5662)">
+                                        <path
+                                            d="M19.2857 10.5001C19.2857 12.9628 18.3073 15.3247 16.5659 17.0661C14.8245 18.8075 12.4627 19.7858 9.99995 19.7858C7.53722 19.7858 5.17537 18.8075 3.43396 17.0661C1.69255 15.3247 0.714233 12.9628 0.714233 10.5001M19.2857 10.5001C19.2857 8.03735 18.3073 5.67549 16.5659 3.93408C14.8245 2.19267 12.4627 1.21436 9.99995 1.21436C7.53722 1.21436 5.17537 2.19267 3.43396 3.93408C1.69255 5.67549 0.714233 8.03735 0.714233 10.5001M19.2857 10.5001H0.714233"
+                                            stroke="#2D266C" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M13.5713 10.5001C13.3959 13.8958 12.1452 17.1477 9.9999 19.7858C7.85464 17.1477 6.60389 13.8958 6.42847 10.5001C6.60389 7.10437 7.85464 3.85243 9.9999 1.21436C12.1452 3.85243 13.3959 7.10437 13.5713 10.5001Z"
+                                            stroke="#2D266C" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_315_5662">
+                                            <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+
+
+                                <span>www.netantech.com.</span>
+                            </div>
+
+                        </div>
+
+                        <p>© 2025. Powered by <span>NETANTECH</span>. All Rights Reserved.</p>
+
+                    </div>
+
+                </div>
+
+
+            </footer>
+
 
         </div>
-
-
-        <div class="section_four">
-
-            <div class="section_four_sub">
-
-                <div class="section_four_sub_container">
-
-                    <div class="section_four_sub_container_text">
-
-                        <h1>
-                            Join Us in Building the Future
-                        </h1>
-
-                        <p>Whether you're looking to develop next-gen software, fortify your cybersecurity, or scale
-                            with cloud technology, we are here to help you succeed.</p>
-
-                        <div class="section_four_sub_container_text_link">
-
-                            <img src="img/Avatar Groups.png" alt="">
-
-                            <p>Let's Talk About Your Next Project</p>
-                        </div>
-
-                        <div class="section_four_sub_container_img">
-                            <img src="img/Frame (4).png" alt="">
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="group_container">
-                        <img src="img/Group 1635.png" class="grouper" alt="">
-                        <img src="img/Group 1636.png" class="grouper_two" alt="">
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-
-
-        <footer>
-
-            <div class="footer_sub">
-
-                <div class="footer_sub_news_section">
-
-                    <div class="footer_sub_news_section_text">
-                        <h2>Join our newsletter</h2>
-                        <p>Get all the latest Netantech news delivered to your inbox.</p>
-                    </div>
-
-                    <div class="footer_sub_news_section_input">
-                        <input type="text" placeholder="Email adress">
-
-                        <button>Subscribe</button>
-                    </div>
-
-                </div>
-
-                <div class="footer_sub_links">
-
-                    <div class="footer_sub_links_sub">
-                        <h2>NETAN TECHNOLOGIES</h2>
-
-                        <ul>
-                            <li>
-                                <a href="#">Website</a>
-                            </li>
-                            <li>
-                                <a href="#">Instagram</a>
-                            </li>
-                            <li>
-                                <a href="#">Twiter</a>
-                            </li>
-                            <li>
-                                <a href="#">Dribble</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="footer_sub_links_img">
-                        <img src="img/Netan_logo-removebg-preview.png" alt="">
-                    </div>
-
-
-                </div>
-
-
-                <div class="contact_section">
-                    <h2>Contact Us</h2>
-
-                    <div class="contact_section_info">
-
-                        <div class="contact_section_info_sub">
-                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M2.12669 4.2709C2.12225 4.18893 2.10172 4.10864 2.06626 4.03461C2.0308 3.96058 1.9811 3.89425 1.92001 3.83943C1.85891 3.7846 1.78762 3.74235 1.7102 3.71508C1.63277 3.6878 1.55074 3.67605 1.46877 3.68048C1.3868 3.68491 1.30651 3.70545 1.23248 3.74091C1.15845 3.77637 1.09213 3.82607 1.0373 3.88716C0.982477 3.94825 0.940222 4.01955 0.91295 4.09697C0.885677 4.17439 0.873921 4.25643 0.878353 4.3384L2.12669 4.2709ZM2.93169 1.07673C2.82224 1.19768 2.76442 1.35662 2.77056 1.51963C2.77671 1.68263 2.84633 1.83677 2.96457 1.94913C3.08281 2.0615 3.2403 2.12319 3.4034 2.12103C3.5665 2.11887 3.7223 2.05302 3.83752 1.93756L2.93169 1.07673ZM7.88669 15.0101C7.95618 15.0549 8.03388 15.0854 8.11527 15.1C8.19666 15.1145 8.28012 15.1128 8.36083 15.0948C8.44154 15.0769 8.51789 15.0431 8.58546 14.9955C8.65303 14.9478 8.71047 14.8872 8.75446 14.8172C8.79845 14.7472 8.82811 14.6692 8.84172 14.5876C8.85534 14.5061 8.85264 14.4226 8.83378 14.3421C8.81492 14.2616 8.78028 14.1857 8.73185 14.1187C8.68343 14.0517 8.62219 13.9949 8.55169 13.9517L7.88669 15.0101ZM11.5942 15.2151C11.4319 15.1811 11.2627 15.2131 11.1239 15.3039C10.9851 15.3947 10.8881 15.5369 10.8542 15.6992C10.8203 15.8616 10.8522 16.0307 10.943 16.1695C11.0338 16.3083 11.176 16.4053 11.3384 16.4392L11.5942 15.2151ZM12.0375 11.4534L12.4167 11.0534L11.51 10.1926L11.1309 10.5926L12.0375 11.4534ZM13.6659 10.8851L15.2575 11.8017L15.8817 10.7184L14.2892 9.80173L13.6659 10.8851ZM15.565 13.7017L14.3809 14.9476L15.2875 15.8092L16.4709 14.5626L15.565 13.7017ZM5.96585 11.7992C2.73585 8.3984 2.19419 5.52923 2.12669 4.2709L0.878353 4.3384C0.961687 5.88006 1.61502 9.0334 5.06002 12.6601L5.96585 11.7992ZM7.11252 6.2684L7.35085 6.01673L6.44502 5.1559L6.20585 5.40756L7.11252 6.2684ZM7.53919 2.8834L6.48835 1.39756L5.46752 2.11923L6.51752 3.60506L7.53919 2.8834ZM6.65835 5.83756C6.50837 5.69303 6.35698 5.54996 6.20419 5.4084L6.20252 5.41006L6.20002 5.41256C6.18523 5.42787 6.17132 5.44401 6.15835 5.4609C6.07667 5.56902 6.01203 5.68903 5.96669 5.81673C5.88502 6.0459 5.84169 6.34923 5.89669 6.72756C6.00502 7.4709 6.49252 8.47006 7.76502 9.8109L8.67169 8.94923C7.48169 7.69673 7.18835 6.9259 7.13335 6.5459C7.10669 6.36256 7.13335 6.26673 7.14419 6.2359L7.15085 6.22006C7.14404 6.23103 7.13623 6.24136 7.12752 6.2509C7.12264 6.25656 7.11763 6.26295 7.11252 6.2684L6.65835 5.83756ZM7.76502 9.81006C9.03419 11.1467 9.99252 11.6717 10.7234 11.7909C11.0992 11.8517 11.4034 11.8026 11.6334 11.7117C11.7611 11.6618 11.8798 11.5914 11.985 11.5034L12.0142 11.4751L12.0259 11.4634C12.0278 11.4618 12.0298 11.4601 12.0317 11.4584L12.0342 11.4559L12.035 11.4542C12.035 11.4542 12.0367 11.4534 11.5834 11.0226C11.13 10.5926 11.1309 10.5917 11.1309 10.5909L11.1325 10.5901L11.1342 10.5876L11.1392 10.5834C11.1518 10.5712 11.1649 10.5596 11.1784 10.5484C11.1859 10.5434 11.185 10.5451 11.1742 10.5492C11.1575 10.5559 11.0825 10.5826 10.9242 10.5567C10.5892 10.5017 9.86585 10.2067 8.67169 8.94923L7.76502 9.81006ZM6.48835 1.39756C5.64335 0.202564 3.95335 6.3628e-05 2.93169 1.07673L3.83752 1.93756C4.27335 1.47923 5.04085 1.51506 5.46752 2.11923L6.48835 1.39756ZM14.3809 14.9476C14.1484 15.1926 13.9059 15.3242 13.6692 15.3476L13.7917 16.5909C14.4142 16.5301 14.9184 16.1984 15.2875 15.8092L14.3809 14.9476ZM7.35085 6.01673C8.15752 5.16756 8.21419 3.83923 7.53919 2.8834L6.51835 3.60506C6.87002 4.10256 6.81585 4.7659 6.44502 5.1559L7.35085 6.01673ZM15.2575 11.8017C15.9417 12.1959 16.0759 13.1642 15.565 13.7017L16.4709 14.5626C17.5584 13.4176 17.2417 11.5017 15.8817 10.7184L15.2575 11.8017ZM12.4167 11.0534C12.7375 10.7151 13.2384 10.6392 13.6659 10.8851L14.2892 9.80173C13.3734 9.27506 12.2392 9.4259 11.51 10.1926L12.4167 11.0534ZM8.55169 13.9517C7.73252 13.4367 6.86002 12.7401 5.96585 11.7992L5.06002 12.6601C6.02169 13.6726 6.97419 14.4367 7.88669 15.0101L8.55169 13.9517ZM13.6684 15.3476C12.9742 15.4085 12.2749 15.3638 11.5942 15.2151L11.3384 16.4392C12.1437 16.6137 12.9709 16.6648 13.7917 16.5909L13.6684 15.3476Z"
-                                    fill="#2D266C" />
-                            </svg>
-
-                            <span>08147583789</span>
-                        </div>
-
-                        <div class="contact_section_info_sub">
-
-                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.5 0.5C14.163 0.5 14.7989 0.763392 15.2678 1.23223C15.7366 1.70107 16 2.33696 16 3V11C16 11.663 15.7366 12.2989 15.2678 12.7678C14.7989 13.2366 14.163 13.5 13.5 13.5H2.5C1.83696 13.5 1.20107 13.2366 0.732233 12.7678C0.263392 12.2989 0 11.663 0 11V3C0 2.33696 0.263392 1.70107 0.732233 1.23223C1.20107 0.763392 1.83696 0.5 2.5 0.5H13.5ZM15 4.461L8.254 8.431C8.19022 8.46845 8.11893 8.49128 8.04527 8.49785C7.9716 8.50442 7.8974 8.49457 7.828 8.469L7.746 8.431L1 4.463V11C1 11.3978 1.15804 11.7794 1.43934 12.0607C1.72064 12.342 2.10218 12.5 2.5 12.5H13.5C13.8978 12.5 14.2794 12.342 14.5607 12.0607C14.842 11.7794 15 11.3978 15 11V4.461ZM13.5 1.5H2.5C2.10218 1.5 1.72064 1.65804 1.43934 1.93934C1.15804 2.22064 1 2.60218 1 3V3.302L8 7.42L15 3.3V3C15 2.60218 14.842 2.22064 14.5607 1.93934C14.2794 1.65804 13.8978 1.5 13.5 1.5Z"
-                                    fill="#2D266C" />
-                            </svg>
-
-
-                            <span>info@netantech.com.</span>
-                        </div>
-
-                        <div class="contact_section_info_sub">
-                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_315_5662)">
-                                    <path
-                                        d="M19.2857 10.5001C19.2857 12.9628 18.3073 15.3247 16.5659 17.0661C14.8245 18.8075 12.4627 19.7858 9.99995 19.7858C7.53722 19.7858 5.17537 18.8075 3.43396 17.0661C1.69255 15.3247 0.714233 12.9628 0.714233 10.5001M19.2857 10.5001C19.2857 8.03735 18.3073 5.67549 16.5659 3.93408C14.8245 2.19267 12.4627 1.21436 9.99995 1.21436C7.53722 1.21436 5.17537 2.19267 3.43396 3.93408C1.69255 5.67549 0.714233 8.03735 0.714233 10.5001M19.2857 10.5001H0.714233"
-                                        stroke="#2D266C" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M13.5713 10.5001C13.3959 13.8958 12.1452 17.1477 9.9999 19.7858C7.85464 17.1477 6.60389 13.8958 6.42847 10.5001C6.60389 7.10437 7.85464 3.85243 9.9999 1.21436C12.1452 3.85243 13.3959 7.10437 13.5713 10.5001Z"
-                                        stroke="#2D266C" stroke-linecap="round" stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_315_5662">
-                                        <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-
-
-
-                            <span>www.netantech.com.</span>
-                        </div>
-
-                    </div>
-
-                    <p>© 2025. Powered by <span>NETANTECH</span>. All Rights Reserved.</p>
-
-                </div>
-
-            </div>
-
-
-        </footer>
-
-
-    </div>
 
 </body>
 <script src="scripts/index.js"></script>
