@@ -905,7 +905,7 @@ form textarea {
     align-items: center;
 }
 
-form a {
+form button {
     padding: 16px 60px;
     border-radius: 10px;
     color: var(--primary_color);
@@ -917,6 +917,8 @@ form a {
     justify-content: center;
     width: 100%;
     max-width: fit-content;
+    border: none;
+    outline: none;
 }
 
 .section_four {

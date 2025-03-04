@@ -171,6 +171,7 @@ a {}
     display: block;
     align-items: center;
     justify-content: center;
+    background-color: linear-gradient(var(--tertiary_color) var(--var_tertiary_color));
     overflow-y: hidden;
 
 }
@@ -220,7 +221,7 @@ a {}
 
 
 svg text {
-    font-size: 8em;
+    font-size: 3em;
     stroke-width: 4;
     letter-spacing: 2px;
     width: 100%;
@@ -242,7 +243,7 @@ svg .text_body {
     0% {
         fill: transparent;
         stroke: var(--primary_color);
-        stroke-width: 4;
+        stroke-width: 3;
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 26%;
     }
@@ -712,8 +713,11 @@ header .nav_bar ul li a span {
     transition: opacity .8s ease;
 }
 
-.section_one_sub_container_text p {
+.section_one_sub_container_text p:nth-child(2) {
     font-family: Inter;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
     font-size: 1.8em;
     font-weight: 300;
     line-height: 35px;
@@ -2079,6 +2083,10 @@ footer {
         max-width: 90%;
     }
 
+    .section_one_sub_container_text p {
+        max-width: 90%;
+    }
+
     .section_one_sub_container_text_link {
         flex-direction: column;
     }
@@ -2267,12 +2275,20 @@ footer {
         grid-template-columns: 100%;
     }
 
-    svg text {
-        font-size: 4em;
+    .phoneSize svg text {
+        font-size: 3em;
+        stroke-width: 4;
+        letter-spacing: 2px;
+        width: 100%;
     }
+    
 
     .section_one_sub_container {
         grid-template-columns: 100%;
+    }
+
+    .section_one_sub_container_text {
+        width: 100%;
     }
 
     .section_one_sub_container_text h1 {
@@ -2280,10 +2296,19 @@ footer {
         max-width: 99%;
     }
 
-
     .section_one_sub_container_text p {
         font-family: Inter;
         font-size: 1.4em;
+        max-width: 100%;
+    }
+
+    .section_one_sub_container_text p:nth-child(2) {
+        font-family: Inter;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: 1.4em;
+        line-height: 1.4;
     }
 
   
@@ -2378,7 +2403,7 @@ footer {
         left: 0px;
         width: calc(100vw / 60);
         height: calc(100vw / 60);
-        margin-top: .18rem;
+        margin-top: .10rem;
     }
 
     .section_six_sub_container_text h2 {

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     loader.style.display = 'none';
                 }, 500);
             });
-        }, 4000);
+        }, 5500);
     }
 
     // Navbar Toggle
@@ -171,137 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
-/*
-class DotsBackground {
-    constructor(canvasSelector) {
-        this.canvas = document.querySelector(canvasSelector);
-
-        // Check if canvas exists before initializing
-        if (!this.canvas) {
-            console.warn(`Canvas ${canvasSelector} not found`);
-            return;
-        }
-
-        this.ctx = this.canvas.getContext('2d');
-        this.dots = [];
-
-        // Bind methods
-        this.resizeCanvas = this.resizeCanvas.bind(this);
-        this.animate = this.animate.bind(this);
-
-        // Initialize
-        this.resizeCanvas();
-        window.addEventListener('resize', this.resizeCanvas);
-        this.createDots();
-        this.animate();
-    }
-
-    resizeCanvas() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-    }
-
-    createDots() {
-        this.dots = Array(600).fill().map(() => new Dot(this.canvas));
-    }
-
-    animate() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
-        // Update and draw dots
-        this.dots.forEach(dot => {
-            dot.update();
-            dot.draw(this.ctx);
-        });
-
-        // Draw connections between nearby dots
-        this.dots.forEach((dot1, i) => {
-            this.dots.slice(i + 1).forEach(dot2 => {
-                const distance = Math.hypot(dot1.x - dot2.x, dot1.y - dot2.y);
-                if (distance < 60) {
-                    this.ctx.beginPath();
-                    this.ctx.moveTo(dot1.x, dot1.y);
-                    this.ctx.lineTo(dot2.x, dot2.y);
-                    const opacity = (60 - distance) / 60 * 0.15;
-                    this.ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
-                    this.ctx.stroke();
-                }
-            });
-        });
-
-        requestAnimationFrame(this.animate);
-    }
-}
-
-class Dot {
-    constructor(canvas) {
-        this.canvas = canvas;
-        // Start with random positions
-        this.x = Math.random() * this.canvas.width;
-        this.y = Math.random() * this.canvas.height;
-        this.initializeProperties();
-    }
-
-    reset() {
-        this.x = 0;
-        this.y = Math.random() * this.canvas.height;
-        this.initializeProperties();
-    }
-
-    initializeProperties() {
-        this.size = Math.random() * 1.5 + 0.5;
-        this.speedX = Math.random() * 1 + 0.4;
-        this.speedY = (Math.random() - 0.5) * 0.5;
-        this.opacity = Math.random() * 0.5 + 0.3;
-        this.pulseSpeed = Math.random() * 0.01 + 0.005;
-        this.pulseDirection = 1;
-    }
-
-    update() {
-        // Move dot
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        // Pulse opacity
-        this.opacity += this.pulseSpeed * this.pulseDirection;
-        if (this.opacity >= 0.8 || this.opacity <= 0.3) {
-            this.pulseDirection *= -1;
-        }
-
-        // Reset when moving off screen
-        if (this.x > this.canvas.width) {
-            this.x = 0;
-            this.y = Math.random() * this.canvas.height;
-        }
-        if (this.y < 0 || this.y > this.canvas.height) {
-            this.y = Math.random() * this.canvas.height;
-        }
-    }
-
-    draw(ctx) {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
-        ctx.fill();
-    }
-}
-
-// Initialize dots animation with checks
-document.addEventListener('DOMContentLoaded', () => {
-    try {
-        const dotsCanvas = document.querySelector('.dotsCanvas');
-        const dotsCanvas1 = document.querySelector('.dotsCanvas1');
-
-        if (dotsCanvas) new DotsBackground('.dotsCanvas');
-        if (dotsCanvas1) new DotsBackground('.dotsCanvas1');
-    } catch (error) {
-        console.warn('Dots animation initialization failed:', error);
-    }
-});
-*/
 
 
 document.addEventListener('DOMContentLoaded', () => {
