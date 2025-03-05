@@ -227,8 +227,7 @@
 
                     <div>
 
-                        <form id="contactForm" name="contact" method="POST" data-netlify="true"
-                            netlify-honeypot="bot-field">
+                        <form id="contactForm" name="contact" data-netlify="true" netlify-honeypot="bot-field">
                             <!-- Add these hidden fields -->
                             <input type="hidden" name="form-name" value="contact">
                             <input type="hidden" name="bot-field">
@@ -268,6 +267,13 @@
                             <div id="formStatus" style="margin-top: 15px;"></div>
                         </form>
 
+                        <!-- Add this popup HTML -->
+                        <div id="successPopup"
+                            style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 9999;">
+                            <h3>Thank you!</h3>
+                            <p>Your message has been received. We'll get back to you soon.</p>
+                        
+                        </div>
 
                     </div>
 
@@ -437,6 +443,7 @@
 
 </body>
 <script src="scripts/index.js"></script>
+<script src="scripts/form-handler.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="scripts/particles.min.js"></script>
