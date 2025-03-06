@@ -19,7 +19,7 @@ exports.handler = async function(event, context) {
     // Prepare email data
     const emailData = {
       From: "info@netantech.com",
-      To: "info@netantech.com",
+      To: "netantechnologies24@gmail.com", // Updated to use your Gmail address
       Subject: `New Contact Form: ${formData.subject || 'Website Inquiry'}`,
       HtmlBody: `
         <h2>New Contact Form Submission</h2>
@@ -41,9 +41,6 @@ ${formData.message || ''}
       `,
       MessageStream: "outbound"
     };
-    
-    // Log request details (without sensitive data)
-    console.log("Making request to Postmark API");
     
     // Make the request with proper headers
     const response = await fetch('https://api.postmarkapp.com/email', {
