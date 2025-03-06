@@ -18,9 +18,10 @@ exports.handler = async function(event, context) {
     
     // Prepare email data
     const emailData = {
-      From: "info@netantech.com",
-      To: "info@netantech.com", // Updated to use your Gmail address
-      Subject: `New Contact Form: ${formData.subject || 'Website Inquiry'}`,
+      From: "Website Contact Form <info@netantech.com>",
+      To: "info@netantech.com",
+      ReplyTo: formData.email, // The actual email of the person who submitted the form
+      Subject: `New Contact: ${formData.fullName} - ${formData.subject || 'Website Inquiry'}`,
       HtmlBody: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${formData.fullName}</p>
