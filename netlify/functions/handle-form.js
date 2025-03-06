@@ -9,15 +9,14 @@ exports.handler = async function(event, context) {
     // Parse form data
     const formData = JSON.parse(event.body);
     
-    // Validate required fields
-    if (!formData.fullName || !formData.email || !formData.message) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ message: "Name, email, and message are required" })
-      };
-    }
+    // Get the token from environment
+    const token = process.env.POSTMARK_API_TOKEN;
     
-    // Prepare email for Postmark API
+    // Log token presence (but not the actual token for security)
+    console.log("Token exists:", !!token);
+    console.log("Token length:", token ? token.length : 0);
+    
+    // Prepare email data
     const emailData = {
       From: "info@netantech.com",
       To: "info@netantech.com",
@@ -29,7 +28,7 @@ exports.handler = async function(event, context) {
         <p><strong>Phone:</strong> ${formData.phone || 'Not provided'}</p>
         <p><strong>Subject:</strong> ${formData.subject || 'Not provided'}</p>
         <p><strong>Message:</strong></p>
-        <p>${formData.message.replace(/\n/g, '<br>')}</p>
+        <p>${formData.message ? formData.message.replace(/\n/g, '<br>') : ''}</p>
       `,
       TextBody: `
 Name: ${formData.fullName}
@@ -38,26 +37,31 @@ Phone: ${formData.phone || 'Not provided'}
 Subject: ${formData.subject || 'Not provided'}
 
 Message:
-${formData.message}
+${formData.message || ''}
       `,
       MessageStream: "outbound"
     };
     
-    // Send email using Postmark API
+    // Log request details (without sensitive data)
+    console.log("Making request to Postmark API");
+    
+    // Make the request with proper headers
     const response = await fetch('https://api.postmarkapp.com/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'X-Postmark-Server-Token': process.env.POSTMARK_API_TOKEN
+        'X-Postmark-Server-Token': token
       },
       body: JSON.stringify(emailData)
     });
     
+    // Get response and log status
+    console.log("Postmark API status:", response.status);
     const result = await response.json();
+    console.log("Postmark API response:", JSON.stringify(result));
     
     if (response.status !== 200) {
-      console.error('Postmark API error:', result);
       throw new Error(`Postmark API error: ${JSON.stringify(result)}`);
     }
     
