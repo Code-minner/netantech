@@ -20,6 +20,7 @@ exports.handler = async function(event, context) {
     const emailData = {
       From: "Website Contact Form <info@netantech.com>",
       To: "info@netantech.com",
+      Cc: "netantechnologies24@gmail.com",
       ReplyTo: formData.email, // The actual email of the person who submitted the form
       Subject: `New Contact: ${formData.fullName} - ${formData.subject || 'Website Inquiry'}`,
       HtmlBody: `
