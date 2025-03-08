@@ -134,6 +134,10 @@ body {
 
 a {}
 
+.upper li, .top, .left, .right, .bottom, .stop, .seq-item, .hero-title, .feature-card, .leftnav {
+    visibility: hidden;
+  }
+
 .cursor {
     z-index: 9999;
     border: 2px solid var(--primary_color);

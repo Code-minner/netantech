@@ -136,9 +136,9 @@
                     </div>
 
                     <div class="bar" onclick="toggleNavBar()">
-                        <span class="bar_sub"></span>
-                        <span class="bar_sub"></span>
-                        <span class="bar_sub"></span>
+                        <span class="bar_sub leftnav"></span>
+                        <span class="bar_sub leftnav"></span>
+                        <span class="bar_sub leftnav"></span>
                     </div>
 
                 </header>
@@ -147,21 +147,21 @@
 
                     <div class="section_one_sub_container_text">
 
-                        <div class="tag">
+                        <div class="tag bottom">
                             <h2>Contact Us</h2>
                         </div>
 
-                        <h1>
+                        <h1 class="bottom">
                             Want to speak to us?
                         </h1>
 
-                        <p>Let’s build the next big thing together.</p>
+                        <p class="bottom">Let’s build the next big thing together.</p>
 
                         <div class="section_one_sub_container_text_link">
 
-                            <img src="img/Avatar Groups.png" alt="">
+                            <img class="bottom" src="img/Avatar Groups.png" alt="">
 
-                            <p>Join thousands already on board!</p>
+                            <p class="bottom">Join thousands already on board!</p>
                         </div>
 
                     </div>
@@ -186,9 +186,9 @@
 
                     <div class="section_two_sub_container_head">
 
-                        <div class="section_two_sub_container_head_sub">
+                        <div class="section_two_sub_container_head_sub left">
 
-                            <div class="section_two_sub_container_head_sub_data">
+                            <div class="section_two_sub_container_head_sub_data left">
                                 <span><svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -202,7 +202,7 @@
                             <p>08147583789</p>
                         </div>
 
-                        <div class="section_two_sub_container_head_sub">
+                        <div class="section_two_sub_container_head_sub right">
 
                             <div class="section_two_sub_container_head_sub_data">
                                 <span> <svg width="23" height="20" viewBox="0 0 23 20" fill="none"
@@ -227,7 +227,7 @@
 
                     <div>
 
-                        <form id="contactForm" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+                        <form id="contactForm" name="contact" data-netlify="true" netlify-honeypot="bot-field" class="bottomCard">
                             <!-- Add these hidden fields -->
                             <input type="hidden" name="form-name" value="contact">
                             <input type="hidden" name="bot-field">
@@ -290,21 +290,21 @@
 
                         <div class="section_four_sub_container_text">
 
-                            <h1>
+                            <h1 class="bottom">
                                 Join Us in Building the Future
                             </h1>
 
-                            <p>Whether you're looking to develop next-gen software, fortify your cybersecurity, or scale
+                            <p class="bottom">Whether you're looking to develop next-gen software, fortify your cybersecurity, or scale
                                 with cloud technology, we are here to help you succeed.</p>
 
                             <div class="section_four_sub_container_text_link">
 
-                                <img src="img/Avatar Groups.png" alt="">
+                                <img class="bottom" src="img/Avatar Groups.png" alt="">
 
-                                <p>Let's Talk About Your Next Project</p>
+                                <p class="bottom">Let's Talk About Your Next Project</p>
                             </div>
 
-                            <div class="section_four_sub_container_img">
+                            <div class="section_four_sub_container_img bottom">
                                 <img src="img/Frame (4).png" alt="">
                             </div>
 
@@ -337,11 +337,16 @@
                             <p>Get all the latest Netantech news delivered to your inbox.</p>
                         </div>
 
-                        <div class="footer_sub_news_section_input">
-                            <input type="text" placeholder="Email adress">
-
-                            <button>Subscribe</button>
+                        <form class="footer_sub_news_section_input" id="newsletter-form"
+                        action="https://netantech.us14.list-manage.com/subscribe/post?u=ea45d476c27fb6c2e8c9d44f6&amp;id=eddadedd85&amp;f_id=0082a4e0f0"
+                        method="post" target="_blank">
+                        <input type="email" name="EMAIL" placeholder="Email address" required>
+                        <!-- This hidden input helps prevent spam -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_ea45d476c27fb6c2e8c9d44f6_eddadedd85" tabindex="-1" value="">
                         </div>
+                        <button type="submit">Subscribe</button>
+                    </form>
 
                     </div>
 
@@ -447,6 +452,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="scripts/particles.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
 <script>
     // Using the same configuration for consistency
     const particleConfig = {

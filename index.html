@@ -14,31 +14,33 @@
 
 <body>
 
+    <div class="loader DesktopSize" id="loaderDesktop">
+        <div id="particles-1"></div>
+        <svg viewBox="0 0 400 260">
+            <text x="30%" y="40%" dy=".32em" text-anchor="middle" class="text_body">
+                Netan
+            </text>
+            <text x="50%" y="60%" dy=".32em" text-anchor="middle" class="text_body second">
+                Technologies
+            </text>
+        </svg>
+    </div>
+
+    <div class="loader phoneSize" id="loaderMobile">
+        <div id="particles-2"></div>
+        <svg viewBox="0 0 400 260">
+            <text x="45%" y="40%" dy=".32em" text-anchor="middle" class="text_body">
+                Netan
+            </text>
+            <text x="50%" y="54%" dy=".32em" text-anchor="middle" class="text_body second">
+                Technologies
+            </text>
+        </svg>
+    </div>
+
     <div class="container">
 
-        <div class="loader DesktopSize" id="loaderDesktop">
-            <div id="particles-1"></div>
-            <svg viewBox="0 0 400 260">
-                <text x="30%" y="40%" dy=".32em" text-anchor="middle" class="text_body">
-                    Netan
-                </text>
-                <text x="50%" y="60%" dy=".32em" text-anchor="middle" class="text_body second">
-                    Technologies
-                </text>
-            </svg>
-        </div>
-        
-        <div class="loader phoneSize" id="loaderMobile">
-            <div id="particles-2"></div>
-            <svg viewBox="0 0 400 260">
-                <text x="45%" y="40%" dy=".32em" text-anchor="middle" class="text_body">
-                    Netan
-                </text>
-                <text x="50%" y="54%" dy=".32em" text-anchor="middle" class="text_body second">
-                    Technologies
-                </text>
-            </svg>
-        </div>
+
 
         <audio id="loaderAudio">
             <source src="img/Welcome.mp3" type="audio/mpeg">
@@ -165,9 +167,9 @@
                     </div>
 
                     <div class="bar" onclick="toggleNavBar()">
-                        <span class="bar_sub"></span>
-                        <span class="bar_sub"></span>
-                        <span class="bar_sub"></span>
+                        <span class="bar_sub leftnav"></span>
+                        <span class="bar_sub leftnav"></span>
+                        <span class="bar_sub leftnav"></span>
                     </div>
 
                 </header>
@@ -176,7 +178,7 @@
 
                     <div class="section_one_sub_container_text">
 
-                        <h1 class="section_one_sub_container_text">
+                        <h1 class="section_one_sub_container_text bottom">
                             Innovating, Securing, & Scaling Your Business for a
                             <span id="dynamic-word-wrapper">
                                 <span class="gradient-text" id="dynamic-word">Digital Future</span>
@@ -184,20 +186,21 @@
                         </h1>
 
 
-                        <p>Powering businesses with cutting-edge technology solutions in software development,
+                        <p class="bottom">Powering businesses with cutting-edge technology solutions in software
+                            development,
                             cybersecurity, and cloud services.</p>
 
                         <div class="section_one_sub_container_text_link">
-                            <a href="#">Get Started</a>
+                            <a href="#" class="bottom">Get Started</a>
 
-                            <img src="img/Avatar Groups.png" alt="">
+                            <img class="bottom" src="img/Avatar Groups.png" alt="">
 
-                            <p>Join thousands already on board!</p>
+                            <p class="bottom">Join thousands already on board!</p>
                         </div>
 
                     </div>
 
-                    <div class="section_one_sub_container_img floating_image">
+                    <div class="section_one_sub_container_img floating_image bottom">
                         <img src="img/Frame (1).png" alt="">
                     </div>
 
@@ -224,21 +227,21 @@
 
                 <div class="head_setion_two">
 
-                    <div class="head_setion_two_box">
+                    <div class="head_setion_two_box bottom">
                         <img src="img/Netan_logoo.png" alt="">
 
                         <p>Software development + Cybersecurity + Cloud solutions.</p>
                     </div>
 
-                    <h2>Our Services</h2>
-                    <p>We do what we know how to do BEST.</p>
+                    <h2 class="bottom">Our Services</h2>
+                    <p class="bottom">We do what we know how to do BEST.</p>
 
 
                 </div>
 
                 <div class="section_two_sub_container">
 
-                    <div class="section_two_sub_container_content">
+                    <div class="section_two_sub_container_content bottomCard">
 
                         <div class="section_two_sub_container_content_img">
                             <img src="img/netgif.gif" alt="">
@@ -256,7 +259,7 @@
 
                     </div>
 
-                    <div class="section_two_sub_container_content">
+                    <div class="section_two_sub_container_content bottomCard">
 
                         <div class="section_two_sub_container_content_img">
                             <img src="img/netgif.gif" alt="">
@@ -274,7 +277,7 @@
 
                     </div>
 
-                    <div class="section_two_sub_container_content">
+                    <div class="section_two_sub_container_content bottomCard">
 
                         <div class="section_two_sub_container_content_img">
                             <img src="img/netgif.gif" alt="">
@@ -309,9 +312,10 @@
 
                     <div class="section_three_sub_container_text">
 
-                        <h2>Transform your business with technology that works for you.</h2>
+                        <h2 class="left">Transform your business with technology that works for you.</h2>
 
-                        <p>Whether it’s software development, cybersecurity, or cloud solutions, we’re here to help.</p>
+                        <p class="right">Whether it’s software development, cybersecurity, or cloud solutions, we’re
+                            here to help.</p>
 
                     </div>
                 </div>
@@ -331,7 +335,7 @@
 
                 <div class="section_four_sub_container">
 
-                    <div class="section_four_sub_container_text">
+                    <div class="section_four_sub_container_text bottom">
 
                         <h2>Why Choose Us?</h2>
 
@@ -346,7 +350,7 @@
                         <a href="#">Explore Our Services</a>
                     </div>
 
-                    <div class="section_four_sub_container_box">
+                    <div class="section_four_sub_container_box bottomCard">
 
                         <div class="section_two_sub_container_content_img">
                             <img src="img/netgif.gif" alt="">
@@ -466,10 +470,10 @@
 
                         <div class="section_six_sub_container_text">
 
-                            <h2>Let’s Build Something Great Together</h2>
+                            <h2 class="bottom">Let’s Build Something Great Together</h2>
 
-                            <p>Partner with Netan Tech for innovative solutions that deliver results.</p>
-                            <a href="#">Get In Touchh</a>
+                            <p class="bottom">Partner with Netan Tech for innovative solutions that deliver results.</p>
+                            <a href="#" class="bottom">Get In Touchh</a>
                         </div>
 
 
@@ -681,11 +685,17 @@
                             <p>Get all the latest Netantech news delivered to your inbox.</p>
                         </div>
 
-                        <div class="footer_sub_news_section_input">
-                            <input type="text" placeholder="Email adress">
 
-                            <button>Subscribe</button>
-                        </div>
+                        <form class="footer_sub_news_section_input" id="newsletter-form"
+                            action="https://netantech.us14.list-manage.com/subscribe/post?u=ea45d476c27fb6c2e8c9d44f6&amp;id=eddadedd85&amp;f_id=0082a4e0f0"
+                            method="post" target="_blank">
+                            <input type="email" name="EMAIL" placeholder="Email address" required>
+                            <!-- This hidden input helps prevent spam -->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_ea45d476c27fb6c2e8c9d44f6_eddadedd85" tabindex="-1" value="">
+                            </div>
+                            <button type="submit">Subscribe</button>
+                        </form>
 
                     </div>
 
@@ -790,6 +800,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="scripts/particles.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
 <script>
     // Simple configuration that can be reused
     const particleConfig = {

@@ -130,6 +130,8 @@ body {
     overflow: hidden;
     background-color: var(--primary_color);
     position: relative;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 a {}
@@ -156,6 +158,10 @@ a {}
     background-color: var(--primary_color);
     border-radius: 50%;
 }
+
+.upper li, .top, .left, .right, .bottom, .stop, .seq-item, .hero-title, .feature-card, .leftnav {
+    visibility: hidden;
+  }
 
 
 .loader {
@@ -243,7 +249,7 @@ svg .text_body {
     0% {
         fill: transparent;
         stroke: var(--primary_color);
-        stroke-width: 3;
+        stroke-width: 2;
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 26%;
     }
@@ -253,7 +259,7 @@ svg .text_body {
     60% {
         fill: transparent;
         stroke: var(--primary_color);
-        stroke-width: 4;
+        stroke-width: 2;
     }
 
     90%,
@@ -2061,7 +2067,7 @@ footer {
     
     .phoneSize svg .text_body {
         stroke: var(--primary_color);
-        animation: 7s 1 alternate animate_stroke;
+        animation: 5s 1 alternate animate_stroke;
     }
     
     .phoneSize {
