@@ -232,13 +232,15 @@ svg text {
     stroke-width: 4;
     letter-spacing: 2px;
     width: 100%;
+    color: var(--primary_color);
 }
 
 
 
 svg .text_body {
     stroke: var(--primary_color);
-    animation: 5s 1 alternate animate_stroke;
+    color: var(--primary_color);
+    animation: 1 s 1 alternate animate_stroke;
 }
 
 .phoneSize {
@@ -270,6 +272,7 @@ svg .text_body {
         stroke-width: 0;
         stroke-dashoffset: -25%;
         stroke-dasharray: 26% 0;
+        color: var(--primary_color);
     }
 }
 

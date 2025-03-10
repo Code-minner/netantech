@@ -675,7 +675,7 @@ header .nav_bar ul li a span {
 
 
 .section_one_sub_container_text h1 {
-    font-size: 4.5em;
+    font-size: 3em;
     background: radial-gradient(50% 144.68% at 17.57% 15.69%, #584AD2 15.5%, #B0A8FF 53%, #2D266C 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -707,7 +707,7 @@ header .nav_bar ul li a span {
     text-decoration-skip-ink: none;
     width: 100%;
     max-width: 70%;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 
 .section_one_sub_container_text_link {

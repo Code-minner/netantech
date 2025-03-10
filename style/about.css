@@ -708,6 +708,7 @@ header .nav_bar ul li a span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Audiowide", serif;
+    margin: 15px 0;
 
 }
 
