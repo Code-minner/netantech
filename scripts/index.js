@@ -130,7 +130,7 @@ let swiper_tes;
 
 document.addEventListener('DOMContentLoaded', function () {
     swiper_tes = new Swiper('.swiper_content_tes', {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 20,
         loop: true,
         autoplay: {
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
             320: { slidesPerView: 1, spaceBetween: 10 },
             640: { slidesPerView: 2, spaceBetween: 15 },
             968: { slidesPerView: 3, spaceBetween: 15 },
-            1200: { slidesPerView: 4, spaceBetween: 20 }
+            1200: { slidesPerView: 3, spaceBetween: 20 }
         }
     });
 

@@ -118,6 +118,7 @@
 
 }
 
+
 html,
 body {
     margin: 0;
@@ -2267,6 +2268,9 @@ footer {
 
 
 @media (max-width: 580px) {
+    header {
+        padding: 1rem 2rem;
+    }
 
     .dropdown_content_text h2 {
         font-family: Anek Gurmukhi;
@@ -2282,7 +2286,7 @@ footer {
     }
 
     .phoneSize svg text {
-        font-size: 3em;
+        font-size: 2.7em;
         stroke-width: 4;
         letter-spacing: 2px;
         width: 100%;
@@ -2298,14 +2302,16 @@ footer {
     }
 
     .section_one_sub_container_text h1 {
-        font-size: 2.6em;
-        max-width: 99%;
+        font-size: 2.2em;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
     .section_one_sub_container_text p {
         font-family: Inter;
         font-size: 1.4em;
         max-width: 100%;
+        margin-bottom: 20px;
     }
 
     .section_one_sub_container_text p:nth-child(2) {
