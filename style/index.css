@@ -240,7 +240,7 @@ svg text {
 svg .text_body {
     stroke: var(--primary_color);
     color: var(--primary_color);
-    animation: 1 s 1 alternate animate_stroke;
+    animation: 5s 1 alternate animate_stroke;
 }
 
 .phoneSize {
